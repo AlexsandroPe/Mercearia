@@ -11,11 +11,10 @@ import styles from "./styles";
 import Header from '../../components/header'
 import Order from "../../components/order";
 export default function Home() {
-  const USER = { name: "Gabriel", city: "Taboão da Serra, SP" };
-
+ 
   return (
     <SafeAreaView style={styles.container} >
-      <Header />
+      <Header/>
       <View style={styles.greeting}>
         <Text style={{color: "#828B93", fontSize: 16}}>Seja bem-vindo,</Text>
         <Text style={styles.greetingMessage}>Vamos pedir itens fresquinhos para você?</Text>
