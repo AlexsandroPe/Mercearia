@@ -1,13 +1,14 @@
 import { View, Image, Text, Pressable } from 'react-native';
 import styles from './styles'
 import { PencilIcon, PencilLine } from 'lucide-react-native';
+import { categoriesImages } from '../../data';
 
 export default function Order({name, date, price, quantity, img, color, dateShown=false }) { 
     return (
         <View style={styles.orderContainer}>
             <View style={styles.orderInfo}>
                 <View style={[styles.imageContainer, {backgroundColor: color}]}>
-                    <Image source={img}/>
+                    <Image source={categoriesImages[img] }/>
                 </View>
                     {
                         !dateShown ? (

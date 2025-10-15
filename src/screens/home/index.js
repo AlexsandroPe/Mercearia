@@ -5,7 +5,7 @@ import {
   ScrollView
 } from "react-native";
 import CategoryCard from '../../components/categoryCard'
-import {CATEGORIES, ORDERS} from '../../data';
+import {ORDERS} from '../../data';
 import { SafeAreaView } from "react-native-safe-area-context";
 import styles from "./styles";
 import Header from '../../components/header'
@@ -38,7 +38,7 @@ export default function Home() {
         scrollEnabled={false}
         contentContainerStyle= {{gap: 20}}
         renderItem={({ item }) => (
-          <Order img={item.img} name={item.name} date={item.date} color={item.color} price={item.value} quantity={item.items} />
+          <Order img={item.category} name={item.name} date={item.date} color={item.color} price={item.value} quantity={item.items} />
         )}
         />
       </View>
