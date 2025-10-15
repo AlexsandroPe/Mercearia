@@ -4,6 +4,7 @@ const styles = StyleSheet.create({
   orderContainer: {
     flex: 1,
     flexDirection: 'row',
+    alignItems: "center"
   },
   imageContainer: {
     borderRadius: 40,

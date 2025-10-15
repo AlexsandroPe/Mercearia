@@ -38,7 +38,7 @@ export default function Home() {
         scrollEnabled={false}
         contentContainerStyle= {{gap: 20}}
         renderItem={({ item }) => (
-          <Order img={item.category} name={item.name} date={item.date} color={item.color} price={item.value} quantity={item.items} />
+          <Order img={item.category} name={item.name} date={item.date} color={item.color} price={item.price} quantity={item.quantity} />
         )}
         />
       </View>
