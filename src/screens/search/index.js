@@ -15,12 +15,11 @@ export default function Search() {
                 </View>
               
             </View>
-            <View style={{flexDirection: "row", flexWrap: 'wrap', gap: 20}}>
+            <View style={{flexDirection: "row", flexWrap: "wrap", gap: 10 }}>
                 <CategoryCard title="Frutas" product='fruits' />
                 <CategoryCard title="Diversos" product='grocery' />
                 <CategoryCard title="Açougue" product='meats' />
                 <CategoryCard title="Bebidas" product='drinks' />
-               
             </View>
         </SafeAreaView>
     )

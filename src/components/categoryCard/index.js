@@ -13,9 +13,9 @@ export const icons = {
 export default function CategoryCard({title, product, orientation}) {
     return (
         <TouchableOpacity style={orientation == 'vertical' ? [styles.vertical] : styles.container} activeOpacity={1}>
-                <Image style={{alignSelf: 'center', flex: 1, height: 150, width: 150}} resizeMode='contain'  source={icons[product]}/>
-                <View style={styles.titleContainer}>
-                  <Text style={styles.titleVertical}>{title}</Text>
+                <Image style={ orientation == 'vertical' ? {alignSelf: 'center', flex: 1, height: 150, width: 150}: {height: 80}} resizeMode='contain'  source={icons[product]}/>
+                <View style={orientation === "vertical" ? styles.titleContainerVertical : styles.titleContainer}>
+                  <Text style={orientation === 'vertical' ? styles.titleVertical : styles.title}>{title}</Text>
                 </View>
         </TouchableOpacity>
     )

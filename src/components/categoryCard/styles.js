@@ -3,7 +3,8 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     height: 80,
-    width: 170,
+    flex: 1,
+    
     flexDirection: "row",
     borderRadius: 10, 
     alignItems: "center",
@@ -15,6 +16,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   titleContainer: {
+    alignItems: "center"
+  },  
+
+  titleContainerVertical: {
     height: 60,
     borderTopLeftRadius: 14,
     borderTopRightRadius: 14,
@@ -22,7 +27,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   title: {
-    fontSize: 20,
+    fontSize: 16,
   },
   vertical: {
     height: 180,
