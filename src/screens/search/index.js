@@ -6,7 +6,7 @@ import styles from './styles.js'
 import CategoryCard from '../../components/categoryCard/index.js';
 import { products } from '../../data/index.js';
 import { useState } from 'react';
-import { FlatList, Text, TextInput, View } from 'react-native';
+import { FlatList, ScrollView, Text, TextInput, View } from 'react-native';
 export default function Search() {
    const [searchText, setSearchText] = useState('');
 
@@ -28,30 +28,28 @@ export default function Search() {
                     <TextInput 
                         onChangeText={(value) => {
                             setSearchText(value)
-                            
                         }}
                         style={{flex: 1}}/>
-                    <SearchIcon size={26} color="#828B93"/>
+                        <SearchIcon size={26} color="#828B93"/>
+                    </View>
+            </View>
+                <View style={{flexDirection: 'row', justifyContent: "center", flexWrap: 'wrap', gap: 8}}>
+                    <CategoryCard title="Frutas" product='fruits'/>
+                    <CategoryCard title="Diversos" product='grocery'/>
+                    <CategoryCard title="Açougue" product='meats' />
+                    <CategoryCard title="Bebidas" product='drinks' />
                 </View>
-            </View>
-            <View style={{flexDirection: "row"}}>
-                <CategoryCard title="Frutas" product='fruits' />
-                <CategoryCard title="Diversos" product='grocery' />
-                <CategoryCard title="Açougue" product='meats' />
-                <CategoryCard title="Bebidas" product='drinks' />
-            </View>
 
-            <View style={{gap: 10}}>
-                {filteredList ? (<Text>Lista</Text>) : null}
-            <FlatList 
-                data={filteredList}
-                keyExtractor={item => item.id}
-                renderItem={({item}) => (
-                    <Order name={item.name} img={item.category} price={item.price}/>
-                )}
-            />
-
-            </View>
+                <View style={{gap: 10, flex: 1,height: 200}}>
+                    {filteredList ? (<Text>Lista</Text>) : null}
+                    <FlatList 
+                        data={filteredList}
+                        keyExtractor={item => item.id}
+                        renderItem={({item}) => (
+                            <Order name={item.name} img={item.category} price={item.price}/>
+                        )}
+                    />
+                </View>
       </SafeAreaView>
     )
 }

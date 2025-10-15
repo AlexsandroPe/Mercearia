@@ -5,7 +5,7 @@ import { ORDERS } from '../../data';
 import Order from '../../components/order';
 import { useNavigation } from '@react-navigation/native';
 export default function Carrinho() {
-
+    
     const navigation = useNavigation();
     return (
         <SafeAreaView style={{flex: 1, gap: 30, paddingVertical: 20}}>

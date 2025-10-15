@@ -7,15 +7,17 @@ const {Navigator, Screen} = createBottomTabNavigator();
 
 export default function BottomTabRoutes() {
     return (
-        <Navigator initialRouteName='Home' screenOptions={{tabBarShowLabel: false, headerShown: false}}>
+        <Navigator initialRouteName='Home' screenOptions={{tabBarShowLabel: false,
+             tabBarStyle: {height: 80, paddingTop: 10}, 
+             headerShown: false}}>
             <Screen name='Home' component={Home} options={{
-                tabBarIcon: () => (<HomeIcon />)
+                tabBarIcon: ({focused}) => (<HomeIcon size={30} color={focused ? "#92B6FA" : "#000"} />)
             }}/>
             <Screen name='Search' component={Search} options={{
-                tabBarIcon: () => (<SearchIcon />),
+                tabBarIcon: ({focused}) => (<SearchIcon size={30} color={focused ? "#92B6FA" : "#000"}/>),
             }}/>
             <Screen name='Carrinho' component={Carrinho} options={{
-                tabBarIcon: () => (<ShoppingBag />)
+                tabBarIcon: ({focused}) => (<ShoppingBag size={30} color={focused ? "#92B6FA" : "#000"} />)
             }}/>
         </Navigator>
     )

@@ -2,7 +2,7 @@ export const categoriesImages = {
       fruits: require("../assets/images/icons/fruits.png"),
       grocery: require("../assets/images/icons/grocery.png"),
       meats: require("../assets/images/icons/meats.png"),
-      drinks: require("../assets/images/icons/meats.png"),
+      drinks: require("../assets/images/icons/drinks.png"),
 
 }
 
